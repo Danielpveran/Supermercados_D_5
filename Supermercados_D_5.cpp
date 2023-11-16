@@ -53,10 +53,32 @@ int main(){
     	}
     	
     	if (descuento) {
-			printf("\nSu producto tiene 20% de descuento\n");
+			printf("\nSu producto tiene 20 porciento de descuento\n");
 		}
+		
+		char Participa[20];
+		strcpy(Participa, Codigo_barras);
+		strcpy(Participa, Codigo_Almacen);
+		
+		int Ganador = 0;
+		
+		for (int i = 0; i < 4; i++) {
+			  if (strcmp(Participa, Numeros_Rifa[i]) == 0) {
+            	Ganador = 1;
+            	break;
+            	}
+		}
+		
+		if (Ganador = 0) {
+        	printf("\nLo siento, su producto no participa en la rifa del vehiculo.\n");
+    	}
     	
-    
-				
+    	if (Ganador = 1) {
+        	printf("\n A Ganado Un vehiculo.\n");
+    	}
+    	
+    	
+		
+	
 return 0;
 }
