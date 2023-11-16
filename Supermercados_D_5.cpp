@@ -17,23 +17,33 @@ int main(){
 									
     char Codigo_barras[11]; //10 Digitos
     char Codigo_Almacen[6]; // 5 digitos los dos primeros son 20
-    	while(1) {
-	        printf("\nCajeros D5\n");
+    
+
+	    printf("\nCajeros D5\n");
 			
-			printf("\nIngrese el codigo de barras\n");
-	        scanf("%10s", &Codigo_barras);
+		printf("\nIngrese el codigo de barras\n");
+	    scanf("%10s", &Codigo_barras);
 	        
-	        printf("\nIngrese el codigo del Almacen\n");
-	        scanf("%5s", &Codigo_Almacen);
+	
 	        
-	        if (strlen(Codigo_barras) != 10) {
-	        	printf("\nEl codigo de barras debe ser de 10 caracteres.\n");
-	        	return 1;
-				}
+	    //Comparativa de Codigo de Barras
+	    if (strlen(Codigo_barras) != 10) {
+	        printf("\nEl codigo de barras debe ser de 10 caracteres.\n");
+	        return 1;
+			}
+
+		printf("\nIngrese el codigo del Almacen\n");
+	    scanf("%5s", &Codigo_Almacen);
+	        
+		//Comparativas de Codigo Almacen
+		if (strlen(Codigo_Almacen) != 5) {
+	        printf("\nEl codigo de Almacen debe ser de 5 caracteres.\n");
+	        return 1;
+			}
 			else{
-				continue;
-				}
-		}
+				if (strlen(Codigo_Almacen, "20",2) != 0)
+			}
 		
+				
 return 0;
 }
